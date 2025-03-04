@@ -295,6 +295,9 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+.information__content:has(.information__description:hover) .information__img {
+  display: block;
+}
 .information__description {
   color: var(--colors-black-text, #222);
   font-size: 16px;
@@ -310,6 +313,7 @@ ul {
 }
 .information__img {
   box-shadow: 9px 10px 22px -2px rgba(34, 60, 80, 0.08);
+  display: none;
 }
 
 .corner {
@@ -382,9 +386,12 @@ ul {
 .lawyer-card {
   width: 312px;
   text-align: center;
-  background: #FFF;
+  background: #fff;
   box-shadow: 2px 2px 12px 0px rgba(33, 33, 33, 0.12);
   position: relative;
+}
+.lawyer-card:hover .lawyer-card__overlay {
+  display: block;
 }
 .lawyer-card__img {
   height: 320px;
@@ -413,6 +420,10 @@ ul {
   line-height: 120%;
   text-transform: lowercase;
 }
+.lawyer-card__overlay {
+  display: none;
+  transition: 0.5s;
+}
 
 .overlay {
   inset: 0;
@@ -421,10 +432,6 @@ ul {
   background-color: #fff;
   text-align: center;
   line-height: 120%;
-  display: none;
-}
-.overlay:hover {
-  display: block;
 }
 .overlay__title {
   color: #222;

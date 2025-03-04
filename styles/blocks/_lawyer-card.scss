@@ -1,9 +1,13 @@
 .lawyer-card {
   width: 312px;
   text-align: center;
-  background: #FFF;
-box-shadow: 2px 2px 12px 0px rgba(33, 33, 33, 0.12);
-position: relative;
+  background: #fff;
+  box-shadow: 2px 2px 12px 0px rgba(33, 33, 33, 0.12);
+  position: relative;
+
+  &:hover .lawyer-card__overlay {
+    display: block;
+  }
 
   &__img {
     height: 320px;
@@ -31,5 +35,10 @@ position: relative;
     font-weight: 300;
     line-height: 120%;
     text-transform: lowercase;
+  }
+
+  &__overlay {
+    display: none;
+    transition: 0.5s;
   }
 }
