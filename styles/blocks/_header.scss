@@ -1,0 +1,45 @@
+.header {
+  &__top {
+    background: #010101;
+    height: 52px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 24px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      color: #fff;
+      font-family: "Nunito Sans";
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 120%;
+    }
+  }
+
+  &__btn {
+    color: #4f8ff0;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+
+  &__bottom {
+    background: rgba(1, 1, 1, 0.76);
+    height: 112px;
+    position: absolute;
+    width: 100%;
+  }
+}

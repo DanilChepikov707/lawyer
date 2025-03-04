@@ -1,0 +1,17 @@
+@use "./variables" as *;
+@use "./reset";
+@use "./blocks/header";
+@use "./blocks/container";
+@use "./blocks/logo";
+@use "./blocks/menu";
+@use "./sections/home";
+@use "./blocks/btn";
+@use "./blocks/title";
+@use "./blocks/subtitle";
+@use "./blocks/services-card";
+@use "./sections/services";
+@use "./sections/information";
+@use "./blocks/corner";
+@use "./blocks/lawyers";
+@use "./blocks/lawyer-card";
+@use "./blocks/overlay";

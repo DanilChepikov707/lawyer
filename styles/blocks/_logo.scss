@@ -1,0 +1,19 @@
+.logo {
+  width: 312px;
+
+  color: #fff;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 120%;
+  text-transform: lowercase;
+
+  span {
+    color: var(--blue-color-100, #4f8ff0);
+    font-family: "Nunito Sans";
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 150%;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,21 @@
+.menu {
+  &__list {
+    display: flex;
+    gap: 32px;
+
+    color: var(--white-color-100, #fff);
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  &__list-item {
+
+&:hover {
+    color: var(--blue-color-100, #4F8FF0); 
+    text-decoration-line: underline;
+}
+  }
+}

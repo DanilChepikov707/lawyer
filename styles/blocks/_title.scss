@@ -1,0 +1,27 @@
+.title {
+  color: --colors-black-text, #222;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 150%;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #4f8ff0;
+  }
+
+  &__highlight {
+    color: var(--blue-color);
+  }
+
+  &_center {
+    text-align: center;
+
+    &::after {
+      margin: 0 auto;
+    }
+  }
+}
