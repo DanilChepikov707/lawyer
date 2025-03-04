@@ -1,0 +1,14 @@
+.reviews {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: url(../images/bg/feedback_bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__cards {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -6,7 +6,7 @@
   position: relative;
 
   &:hover .lawyer-card__overlay {
-    display: block;
+    opacity: 1;
   }
 
   &__img {
@@ -38,7 +38,7 @@
   }
 
   &__overlay {
-    display: none;
-    transition: 0.5s;
+    opacity: 0;
+    transition: 0.3s;
   }
 }

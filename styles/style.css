@@ -391,7 +391,7 @@ ul {
   position: relative;
 }
 .lawyer-card:hover .lawyer-card__overlay {
-  display: block;
+  opacity: 1;
 }
 .lawyer-card__img {
   height: 320px;
@@ -421,8 +421,8 @@ ul {
   text-transform: lowercase;
 }
 .lawyer-card__overlay {
-  display: none;
-  transition: 0.5s;
+  opacity: 0;
+  transition: 0.3s;
 }
 
 .overlay {
@@ -455,4 +455,59 @@ ul {
   font-size: 16px;
   font-weight: 600;
   margin-top: 40px;
+}
+
+.reviews {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: url(../images/bg/feedback_bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.reviews__cards {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews-card {
+  width: 648px;
+  padding: 32px;
+  background: #fff;
+  box-shadow: 2px 2px 10px 0px rgba(33, 33, 33, 0.15);
+}
+.reviews-card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.reviews-card__text-wrapper {
+  flex-grow: 1;
+}
+.reviews-card__company {
+  color: #222;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 120%;
+}
+.reviews-card__name {
+  color: #222;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  margin-top: 4px;
+}
+.reviews-card__desc {
+  color: #222;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }/*# sourceMappingURL=style.css.map */

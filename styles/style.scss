@@ -12,6 +12,8 @@
 @use "./sections/services";
 @use "./sections/information";
 @use "./blocks/corner";
-@use "./blocks/lawyers";
+@use "./sections/lawyers";
 @use "./blocks/lawyer-card";
 @use "./blocks/overlay";
+@use "./sections/reviews";
+@use "./blocks/reviews-card";
