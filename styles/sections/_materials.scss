@@ -1,0 +1,16 @@
+.materials {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 48px;
+  }
+}
