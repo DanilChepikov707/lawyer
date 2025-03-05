@@ -19,7 +19,7 @@
           <div class="header__contacts">
             <div class="header__contacts-item">
               <img src="images/icons/phone.svg" alt="phone" />
-              <a href="tel:++79220229482">+7 (922) 022-94-82</a>
+              <a href="tel:+79220229482">+7 (922) 022-94-82</a>
             </div>
             <div class="header__contacts-item">
               <img src="images/icons/mail.svg" alt="mail" />
@@ -31,15 +31,17 @@
       </div>
       <div class="header__bottom">
         <div class="header__container container">
-          <h1 class="logo"><span>Правозащитник</span> Юридическая компания</h1>
+          <h1 class="logo" id="home">
+            <a href=""><span>Правозащитник</span> Юридическая компания</a>
+          </h1>
           <nav class="menu">
             <ul class="menu__list">
-              <li class="menu__list-item"><a href="">Услуги</a></li>
-              <li class="menu__list-item"><a href="">О компании</a></li>
-              <li class="menu__list-item"><a href="">Наши юристы</a></li>
-              <li class="menu__list-item"><a href="">Отзывы</a></li>
-              <li class="menu__list-item"><a href="">Нововсти</a></li>
-              <li class="menu__list-item"><a href="">Контакты</a></li>
+              <li class="menu__list-item"><a href="#services">Услуги</a></li>
+              <li class="menu__list-item"><a href="#information">О компании</a></li>
+              <li class="menu__list-item"><a href="#lawyers">Наши юристы</a></li>
+              <li class="menu__list-item"><a href="#reviews">Отзывы</a></li>
+              <li class="menu__list-item"><a href="#materials">Новости</a></li>
+              <li class="menu__list-item"><a href="#footer">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -57,7 +59,7 @@
           <button class="home__btn btn">Наши услуги</button>
         </div>
       </section>
-      <section class="services">
+      <section class="services" id="services">
         <h2 class="title title_center">Наши услуги</h2>
         <p class="subtitle">
           Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот
@@ -162,7 +164,7 @@
           <button class="services__btn btn">Все услуги</button>
         </div>
       </section>
-      <section class="information">
+      <section class="information" id="information">
         <div class="container">
           <div class="information__content">
             <div class="information__text-wrapper">
@@ -185,7 +187,7 @@
           </div>
         </div>
       </section>
-      <section class="lawyers">
+      <section class="lawyers" id="lawyers">
         <div class="container">
           <h2 class="title title_center">Наши юристы</h2>
           <p class="subtitle">
@@ -291,7 +293,7 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="container">
           <h2 class="title">Что о нас говорят клиенты</h2>
           <div class="reviews__cards">
@@ -332,7 +334,7 @@
           </div>
         </div>
       </section>
-      <section class="materials">
+      <section class="materials" id="materials">
         <div class="container">
           <h2 class="title title_center">Полезные материалы</h2>
           <p class="subtitle">
@@ -417,11 +419,13 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer__top">
         <div class="container">
           <div class="footer__title">
-            <div class="logo"><span>Правозащитник</span>Юридическая компания</div>
+            <div class="logo">
+              <a href="#home"><span>Правозащитник</span>Юридическая компания</a>
+            </div>
             <p class="footer__text">
               Предварительные выводы неутешительны: синтетическое тестирование, а также свежий взгляд на привычные вещи — безусловно открывает новые
               горизонты для экономической целесообразности принимаемых решений.
@@ -435,8 +439,12 @@
                   <img class="footer-contacts__icon" src="images/icons/map.svg" alt="map" />
                 </div>
                 <div class="footer-contacts__info">
-                  <p class="footer-contacts__title">Наш адрес</p>
-                  <p class="footer-contacts__text">г. Одинцово, пр. Будапештсткая, 40</p>
+                  <a
+                    href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.377655%2C59.859610&mode=whatshere&whatshere%5Bpoint%5D=30.377654%2C59.859596&whatshere%5Bzoom%5D=17&z=17"
+                  >
+                    <p class="footer-contacts__title">Наш адрес</p>
+                    <p class="footer-contacts__text">г. Одинцово, пр. Будапештсткая, 40 ></p></a
+                  >
                 </div>
               </div>
               <!-- 2 -->
@@ -445,8 +453,10 @@
                   <img class="footer-contacts__icon" src="images/icons/phone_footer.svg" alt="phone" />
                 </div>
                 <div class="footer-contacts__info">
-                  <p class="footer-contacts__title">Запись на консультанцию</p>
-                  <p class="footer-contacts__text">+7 (922) 022-94-82</p>
+                  <a href="tel:+79220229482">
+                    <p class="footer-contacts__title">Запись на консультанцию</p>
+                    <p class="footer-contacts__text">+7 (922) 022-94-82</p></a
+                  >
                 </div>
               </div>
               <!-- 3 -->
@@ -455,16 +465,44 @@
                   <img class="footer-contacts__icon" src="images/icons/mail_footer.svg" alt="mail" />
                 </div>
                 <div class="footer-contacts__info">
-                  <p class="footer-contacts__title">Корреспонденция</p>
-                  <p class="footer-contacts__text">janis62@yahoo.com</p>
+                  <a href="mailto:janis62@yahoo.com"><p class="footer-contacts__title">Корреспонденция</p>
+                    <p class="footer-contacts__text">janis62@yahoo.com</p></a>
+                  
                 </div>
               </div>
+            </div>
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__list-item"><a href="#services">Услуги</a></li>
+                <li class="footer-menu__list-item"><a href="#information">О компании</a></li>
+                <li class="footer-menu__list-item"><a href="#lawyers">Сертификаты</a></li>
+                <li class="footer-menu__list-item"><a href="#reviews">Отзывы</a></li>
+                <li class="footer-menu__list-item"><a href="#materials">Полезные материалы</a></li>
+                <li class="footer-menu__list-item"><a href="#footer">Благотворительность</a></li>
+              </ul>
+            </nav>
+            <div class="footer-card">
+              <div class="footer-card__header">
+                <img class="footer-card__img" src="images/lawyer_footer.png" alt="lawyer" />
+                <div class="footer-card__info">
+                  <p class="footer-card__name">Миронов Александр</p>
+                  <p class="footer-card__post">Ведущий юрист</p>
+                </div>
+              </div>
+              <p class="footer-card__desc">
+                Есть над чем задуматься: тщательные исследования конкурентов разоблачены. Идейные соображения высшего порядка, а также перспективное
+                планирование играет
+              </p>
+              <button class="btn footer-card__btn">Задать вопрос юристу</button>
             </div>
           </div>
         </div>
       </div>
       <div class="footer__bottom">
-        <div class="container"></div>
+        <div class="container footer__container">
+          <p class="footer__copyright">Все права защищены, 2023</p>
+          <a class="footer__policy">Политика обработки персональных данных</a>
+        </div>
       </div>
     </footer>
   </body>

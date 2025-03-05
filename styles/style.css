@@ -11,6 +11,7 @@
 
 html {
   font-family: "Nunito Sans";
+  scroll-behavior: smooth;
 }
 
 a {
@@ -70,7 +71,6 @@ ul {
 }
 
 .logo {
-  width: 312px;
   color: #fff;
   font-family: "Nunito Sans";
   font-size: 20px;
@@ -85,6 +85,7 @@ ul {
   font-weight: 900;
   line-height: 150%;
   text-transform: uppercase;
+  display: block;
 }
 
 .menu__list {
@@ -389,6 +390,7 @@ ul {
   background: #fff;
   box-shadow: 2px 2px 12px 0px rgba(33, 33, 33, 0.12);
   position: relative;
+  cursor: url(../images/icons/la_hand-pointer_blue.svg), pointer;
 }
 .lawyer-card:hover .lawyer-card__overlay {
   opacity: 1;
@@ -615,4 +617,146 @@ ul {
   height: 100%;
 }
 
-/* __img  *//*# sourceMappingURL=style.css.map */
+/* __img  */
+.footer__top {
+  padding: 80px 0;
+  background: #222;
+}
+.footer__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer__title::after {
+  margin-top: 60px;
+  content: "";
+  display: block;
+  width: 1320px;
+  height: 1px;
+  opacity: 0.2;
+  background: #8c8c8c;
+}
+.footer__text {
+  width: 862px;
+  color: #f8f5f4;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: lowercase;
+}
+.footer .footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+}
+.footer__bottom {
+  background: #181818;
+  padding: 16px 0;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__copyright, .footer__policy {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.footer__policy {
+  cursor: pointer;
+}
+.footer__policy:hover {
+  color: #4f8ff0;
+  text-decoration: underline;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer-contacts__item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.footer-contacts__box {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  position: relative;
+  background: #2c2c2c;
+}
+.footer-contacts__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer-contacts__title {
+  color: #8c8c8c;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.footer-contacts__text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.footer-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-menu__list-item {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.footer-menu__list-item:hover {
+  color: #4F8FF0;
+}
+
+.footer-card {
+  width: 424px;
+  color: #fff;
+}
+.footer-card__header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.footer-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.footer-card__name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.footer-card__post {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 120%;
+}
+.footer-card__desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 16px;
+}
+.footer-card__btn {
+  margin-top: 24px;
+}/*# sourceMappingURL=style.css.map */

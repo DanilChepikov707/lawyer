@@ -4,6 +4,7 @@
   background: #fff;
   box-shadow: 2px 2px 12px 0px rgba(33, 33, 33, 0.12);
   position: relative;
+  cursor: url(../images/icons/la_hand-pointer_blue.svg), pointer;
 
   &:hover .lawyer-card__overlay {
     opacity: 1;

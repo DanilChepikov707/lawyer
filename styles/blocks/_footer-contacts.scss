@@ -1,0 +1,45 @@
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__box {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    position: relative;
+
+    background: #2c2c2c;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__info {
+  }
+
+  &__title {
+    color: #8c8c8c;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+}

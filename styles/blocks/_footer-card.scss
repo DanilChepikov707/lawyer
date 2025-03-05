@@ -1,0 +1,40 @@
+.footer-card {
+  width: 424px;
+  color: #fff;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+
+  &__post {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 120%;
+  }
+
+  &__desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+
+    margin-top: 16px;
+  }
+
+  &__btn {
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,19 @@
+.footer-menu {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__list-item {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    &:hover {
+        color: #4F8FF0;
+    }
+  }
+}
