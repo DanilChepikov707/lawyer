@@ -27,6 +27,29 @@ ul {
   list-style-type: none;
 }
 
+.logo {
+  color: #fff;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 120%;
+  text-transform: lowercase;
+}
+.logo span {
+  color: var(--blue-color-100, #4f8ff0);
+  font-family: "Nunito Sans";
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 150%;
+  text-transform: uppercase;
+  display: block;
+}
+
+@media (max-width: 834px) {
+  .logo span {
+    line-height: 120%;
+  }
+}
 .header__top {
   background: #010101;
   height: 52px;
@@ -65,29 +88,46 @@ ul {
   width: 100%;
 }
 
+@media (max-width: 834px) {
+  .header__contacts {
+    gap: 16px;
+  }
+  .header__bottom {
+    height: 84px;
+  }
+  .header__logo {
+    font-size: 16px;
+  }
+  .header__logo span {
+    font-size: 22px;
+  }
+}
+@media (max-width: 620px) {
+  .header__contacts-item:nth-child(2) {
+    display: none;
+  }
+}
 .container {
   margin: 0 auto;
-  width: 1320px;
+  max-width: 1320px;
+  padding: 0 15px;
 }
 
-.logo {
-  color: #fff;
-  font-family: "Nunito Sans";
-  font-size: 20px;
-  font-weight: 900;
-  line-height: 120%;
-  text-transform: lowercase;
+@media (max-width: 834px) {
+  .container {
+    padding: 0 69px;
+  }
 }
-.logo span {
-  color: var(--blue-color-100, #4f8ff0);
-  font-family: "Nunito Sans";
-  font-size: 28px;
-  font-weight: 900;
-  line-height: 150%;
-  text-transform: uppercase;
-  display: block;
+@media (max-width: 620px) {
+  .container {
+    padding: 0 40px;
+  }
 }
-
+@media (max-width: 520px) {
+  .container {
+    padding: 0 23px;
+  }
+}
 .menu__list {
   display: flex;
   gap: 32px;
@@ -99,10 +139,15 @@ ul {
   line-height: 120%;
 }
 .menu__list-item:hover {
-  color: var(--blue-color-100, #4F8FF0);
+  color: var(--blue-color-100, #4f8ff0);
   text-decoration-line: underline;
 }
 
+@media (max-width: 1050px) {
+  .menu__list {
+    display: none;
+  }
+}
 .home {
   padding: 265px 0 268px 0;
   background-image: url("../images/bg/home_bg.webp");
@@ -131,7 +176,7 @@ ul {
   text-transform: uppercase;
 }
 .home__text {
-  width: 1090px;
+  max-width: 1090px;
   margin: 0 auto;
   color: var(--white-color-100, #fff);
   text-align: center;
@@ -156,6 +201,41 @@ ul {
   color: var(--blue-color-100, #4f8ff0);
 }
 
+@media (max-width: 834px) {
+  .home {
+    padding: 148px 0 100px 0;
+  }
+  .home__title {
+    font-size: 24px;
+  }
+  .home__title span {
+    font-size: 50px;
+  }
+  .home__text {
+    font-size: 18px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 550px) {
+  .home__title {
+    font-size: 18px;
+  }
+  .home__title span {
+    font-size: 35px;
+  }
+}
+@media (max-width: 410px) {
+  .home {
+    padding: 142px 0 60px 0;
+  }
+  .home span {
+    font-size: 30px;
+  }
+  .home__text {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
 .btn {
   padding: 16px 24px;
   border: 2px solid #4f8ff0;
@@ -570,7 +650,7 @@ ul {
   margin-left: 10px;
   flex-grow: 1;
   height: 1px;
-  background: #F8F5F4;
+  background: #f8f5f4;
 }
 .materials-card__desc {
   color: #222;
@@ -580,6 +660,7 @@ ul {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
+  line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -617,7 +698,6 @@ ul {
   height: 100%;
 }
 
-/* __img  */
 .footer__top {
   padding: 80px 0;
   background: #222;

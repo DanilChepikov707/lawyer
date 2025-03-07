@@ -43,3 +43,35 @@
     width: 100%;
   }
 }
+
+@media (max-width: 834px) {
+  .header {
+    &__contacts {
+      gap: 16px;
+    }
+
+    &__bottom {
+      height: 84px;
+    }
+
+    &__logo {
+      font-size: 16px;
+
+      span {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .header {
+    &__contacts {
+      &-item:nth-child(2) {
+        display: none;
+      }
+    }
+
+    
+  }
+}
