@@ -40,3 +40,23 @@
     line-height: 150%;
   }
 }
+
+@media (max-width: 855px) {
+  .footer-contacts {
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .footer-contacts {
+    gap: 34px;
+  }
+}
+
+@media (max-width: 730px) {
+  .footer-contacts {
+    gap: 16px;
+  }
+}

@@ -1,5 +1,4 @@
 .footer-card {
-  width: 424px;
   color: #fff;
 
   &__header {
@@ -32,9 +31,16 @@
     line-height: 150%;
 
     margin-top: 16px;
+    max-width: 334px;
   }
 
   &__btn {
     margin-top: 24px;
+  }
+}
+
+@media (max-width: 730px) {
+  .footer-card {
+    margin-top: 40px;
   }
 }

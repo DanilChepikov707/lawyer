@@ -25,3 +25,19 @@
     }
   }
 }
+
+@media (max-width: 850px) {
+  .title {
+    font-size: 24px;
+
+    &::after {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .title {
+    font-size: 20px;
+  }
+}
