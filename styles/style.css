@@ -111,6 +111,7 @@ ul {
   margin: 0 auto;
   max-width: 1320px;
   padding: 0 25px;
+  box-sizing: content-box;
 }
 
 @media (max-width: 850px) {
@@ -118,11 +119,11 @@ ul {
     padding: 0 69px;
   }
 }
-@media (max-width: 620px) {
+/* @media (max-width: 620px) {
   .container {
     padding: 0 40px;
   }
-}
+} */
 @media (max-width: 520px) {
   .container {
     padding: 0 23px;
@@ -289,6 +290,11 @@ ul {
   margin: 0 auto;
 }
 
+@media (max-width: 1105px) {
+  .title {
+    font-size: 24px;
+  }
+}
 @media (max-width: 850px) {
   .title {
     font-size: 24px;
@@ -314,7 +320,9 @@ ul {
 }
 
 .services-card {
-  width: 412px;
+  flex: 1 0 336px;
+  max-width: 412px;
+  min-width: 336px;
   padding: 50px 32px;
   text-align: center;
   background: #ffffff;
@@ -345,8 +353,38 @@ ul {
   font-weight: 400;
   line-height: 120%;
   margin-top: 10px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+@media (max-width: 1140px) {
+  .services-card {
+    max-width: 336px;
+  }
+}
+@media (max-width: 1105px) {
+  .services-card {
+    padding: 30px 32px 40px;
+  }
+  .services-card__title {
+    line-height: 120%;
+  }
+}
+@media (max-width: 834px) {
+  .services-card {
+    flex-basis: 250px;
+    min-width: 250px;
+  }
+}
+@media (max-width: 662px) {
+  .services-card {
+    padding: 24x 16px 32px;
+    max-width: 250px;
+  }
+}
 .services {
   background: #f7f7f7;
   padding-top: 80px;
@@ -356,14 +394,12 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 38px;
+  gap: 38px;
   margin-top: 48px;
-}
-@media (max-width: 1300px) {
-  .services__cards {
+  /*  @media (max-width: 1300px) {
     justify-content: center;
     gap: 24px;
-  }
+  } */
 }
 .services__btn {
   display: block;
@@ -387,6 +423,29 @@ ul {
   text-transform: uppercase;
 }
 
+@media (max-width: 1140px) {
+  .services__cards {
+    gap: 24px;
+  }
+}
+@media (max-width: 1106px) {
+  .services__cards {
+    justify-content: center;
+  }
+}
+@media (max-width: 834px) {
+  .services {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 661px) {
+  .services__cards {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}
 .information {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -510,10 +569,20 @@ ul {
   margin-top: 48px;
   display: flex;
   justify-content: space-between;
+  gap: 24px;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
 
+@media (max-width: 834px) {
+  .lawyers {
+    padding: 60px 0;
+  }
+}
 .lawyer-card {
-  width: 312px;
+  flex: 1 0 300px;
+  max-width: 312px;
+  min-width: 300px;
   text-align: center;
   background: #fff;
   box-shadow: 2px 2px 12px 0px rgba(33, 33, 33, 0.12);
@@ -534,8 +603,10 @@ ul {
   -o-object-position: center;
      object-position: center;
 }
+.lawyer-card__info {
+  padding: 24px 0;
+}
 .lawyer-card__title {
-  margin-top: 24px;
   color: #222;
   font-size: 16px;
   font-weight: 700;
@@ -543,7 +614,6 @@ ul {
 }
 .lawyer-card__subtitle {
   margin-top: 10px;
-  margin-bottom: 24px;
   color: #222;
   font-size: 14px;
   font-weight: 300;
@@ -555,6 +625,18 @@ ul {
   transition: 0.3s;
 }
 
+@media (max-width: 834px) {
+  .lawyer-card {
+    /*  max-width: 300px;
+     min-width: 250px;
+     flex-basis: 250px; */
+    width: max(250px, min(300px, 64vw));
+    height: 348px;
+  }
+  .lawyer-card__img {
+    height: 235px;
+  }
+}
 .overlay {
   inset: 0;
   position: absolute;
@@ -760,13 +842,13 @@ ul {
   margin-top: 60px;
   content: "";
   display: block;
-  width: 1320px;
+  /* width: 1320px; */
   height: 1px;
   opacity: 0.2;
   background: #8c8c8c;
 }
 .footer__text {
-  width: 862px;
+  /*  width: 862px; */
   color: #f8f5f4;
   font-size: 16px;
   font-weight: 400;

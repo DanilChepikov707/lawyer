@@ -7,13 +7,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    row-gap: 38px;
+    gap: 38px;
     margin-top: 48px;
 
-    @media (max-width: 1300px) {
+    /*  @media (max-width: 1300px) {
       justify-content: center;
       gap: 24px;
-    }
+    } */
   }
 
   &__btn {
@@ -38,6 +38,39 @@
       font-weight: 900;
       line-height: 120%;
       text-transform: uppercase;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .services {
+    &__cards {
+      gap: 24px;
+    }
+  }
+}
+
+@media (max-width: 1106px) {
+  .services {
+    &__cards {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .services {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 661px) {
+  .services {
+    &__cards {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      overflow-x: scroll;
+      scrollbar-width: none;
     }
   }
 }

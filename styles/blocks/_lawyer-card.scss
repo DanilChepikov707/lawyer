@@ -1,5 +1,7 @@
 .lawyer-card {
-  width: 312px;
+  flex: 1 0 300px;
+  max-width: 312px;
+  min-width: 300px;
   text-align: center;
   background: #fff;
   box-shadow: 2px 2px 12px 0px rgba(33, 33, 33, 0.12);
@@ -20,8 +22,11 @@
     }
   }
 
+  &__info {
+    padding: 24px 0;
+  }
+
   &__title {
-    margin-top: 24px;
     color: #222;
     font-size: 16px;
     font-weight: 700;
@@ -30,7 +35,6 @@
 
   &__subtitle {
     margin-top: 10px;
-    margin-bottom: 24px;
     color: #222;
     font-size: 14px;
     font-weight: 300;
@@ -41,5 +45,19 @@
   &__overlay {
     opacity: 0;
     transition: 0.3s;
+  }
+}
+
+@media (max-width: 834px) {
+  .lawyer-card {
+   /*  max-width: 300px;
+    min-width: 250px;
+    flex-basis: 250px; */
+    width: max(250px, min(300px, 64vw));
+    height: 348px;
+
+    &__img {
+      height: 235px;
+    }
   }
 }

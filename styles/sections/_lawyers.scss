@@ -7,5 +7,20 @@
     margin-top: 48px;
     display: flex;
     justify-content: space-between;
+    gap: 24px;
+
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 1325px) {
+  .lawyers {
+  }
+}
+
+@media (max-width: 834px) {
+  .lawyers {
+    padding: 60px 0;
   }
 }
