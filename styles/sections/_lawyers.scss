@@ -8,6 +8,8 @@
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    align-items: baseline;
+    overflow-y: hidden;
 
     overflow-x: scroll;
     scrollbar-width: none;

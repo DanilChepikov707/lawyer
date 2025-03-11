@@ -570,6 +570,8 @@ ul {
   display: flex;
   justify-content: space-between;
   gap: 24px;
+  align-items: baseline;
+  overflow-y: hidden;
   overflow-x: scroll;
   scrollbar-width: none;
 }
@@ -580,8 +582,7 @@ ul {
   }
 }
 .lawyer-card {
-  flex: 1 0 300px;
-  max-width: 312px;
+  flex: 1 1 312px;
   min-width: 300px;
   text-align: center;
   background: #fff;
@@ -604,7 +605,7 @@ ul {
      object-position: center;
 }
 .lawyer-card__info {
-  padding: 24px 0;
+  padding: 24px 16px;
 }
 .lawyer-card__title {
   color: #222;
@@ -626,15 +627,33 @@ ul {
 }
 
 @media (max-width: 834px) {
-  .lawyer-card {
-    /*  max-width: 300px;
-     min-width: 250px;
-     flex-basis: 250px; */
-    width: max(250px, min(300px, 64vw));
-    height: 348px;
-  }
   .lawyer-card__img {
-    height: 235px;
+    height: clamp(235px, 235px + 85 * (100vw - 320px) / 514, 320px);
+  }
+}
+@media (max-width: 560px) {
+  .lawyer-card {
+    min-width: 250px;
+  }
+}
+@media (max-width: 390px) {
+  .lawyer-card__subtitle {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 565px) {
+  .lawyer-card__subtitle {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 .overlay {
@@ -689,7 +708,6 @@ ul {
   display: flex;
   gap: 24px;
   margin-top: 32px;
-  justify-content: center;
 }
 
 @media (max-width: 834px) {
@@ -717,10 +735,10 @@ ul {
   flex: 1 0 576px;
   max-width: 648px;
   min-width: 576px;
+  flex-shrink: 0;
   padding: 32px;
   background: #fff;
   box-shadow: 2px 2px 10px 0px rgba(33, 33, 33, 0.15);
-  flex-shrink: 0;
 }
 .reviews-card__info {
   display: flex;
@@ -804,6 +822,9 @@ ul {
   display: flex;
   justify-content: space-between;
   margin-top: 48px;
+  gap: 24px;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
 .materials__btn {
   display: block;
@@ -811,8 +832,27 @@ ul {
   margin-top: 48px;
 }
 
+@media (max-width: 834px) {
+  .materials {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .materials__cards {
+    margin-top: 29px;
+  }
+}
+@media (max-width: 420px) {
+  .materials {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 .materials-card {
-  width: 424px;
+  flex: 1 0 336px;
+  max-width: 424px;
+  min-width: 336px;
+  flex-shrink: 0;
+  overflow: hidden;
   /* при наведении на img-wrapper или title будет появляться overlay */
 }
 .materials-card:has(.materials-card__img-wrapper:hover, .materials-card__title:hover) .materials-card__title {
@@ -900,6 +940,46 @@ ul {
   height: 100%;
 }
 
+@media (max-width: 834px) {
+  .materials-card {
+    width: clamp(250px, 250px + 86 * (100vw - 390px) / 444, 336px);
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .materials-card__desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .materials-card__content {
+    padding: 16px 0;
+  }
+  .materials-card__img-wrapper {
+    height: clamp(200px, 200px + 70 * (100vw - 390px) / 444, 270px);
+  }
+}
+@media (max-width: 420px) {
+  .materials-card {
+    max-width: 336px;
+    min-width: 250px;
+    flex-shrink: 1;
+    height: 430px;
+  }
+  .materials-card__desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .materials-card__title {
+    font-size: 14px;
+  }
+}
 .footer__top {
   padding: 80px 0;
   background: #222;
@@ -914,13 +994,13 @@ ul {
   margin-top: 60px;
   content: "";
   display: block;
-  /* width: 1320px; */
+  width: 100%;
   height: 1px;
   opacity: 0.2;
   background: #8c8c8c;
 }
 .footer__text {
-  /*  width: 862px; */
+  max-width: 862px;
   color: #f8f5f4;
   font-size: 16px;
   font-weight: 400;
@@ -965,13 +1045,20 @@ ul {
     display: none;
   }
 }
+@media (max-width: 834px) {
+  .footer__title::after {
+    margin-top: 24px;
+  }
+  .footer__content {
+    margin-top: 24px;
+  }
+}
 @media (max-width: 730px) {
   .footer__top {
     padding: 40px 0;
   }
   .footer__content {
     flex-wrap: wrap;
-    margin-top: 24px;
   }
   .footer__container {
     flex-direction: column;

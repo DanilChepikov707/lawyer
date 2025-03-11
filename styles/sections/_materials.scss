@@ -6,11 +6,34 @@
     display: flex;
     justify-content: space-between;
     margin-top: 48px;
+    gap: 24px;
+
+    overflow-x: scroll;
+    scrollbar-width: none;
   }
 
   &__btn {
     display: block;
     margin: 0 auto;
     margin-top: 48px;
+  }
+}
+
+@media (max-width: 834px) {
+  .materials {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__cards {
+      margin-top: 29px;
+    }
+  }
+}
+
+
+@media (max-width: 420px) {
+  .materials {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }

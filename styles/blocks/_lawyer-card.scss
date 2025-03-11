@@ -1,7 +1,7 @@
 .lawyer-card {
-  flex: 1 0 300px;
-  max-width: 312px;
+  flex: 1 1 312px;
   min-width: 300px;
+
   text-align: center;
   background: #fff;
   box-shadow: 2px 2px 12px 0px rgba(33, 33, 33, 0.12);
@@ -14,6 +14,7 @@
 
   &__img {
     height: 320px;
+
     img {
       width: 100%;
       height: 100%;
@@ -23,7 +24,7 @@
   }
 
   &__info {
-    padding: 24px 0;
+    padding: 24px 16px;
   }
 
   &__title {
@@ -50,15 +51,40 @@
 
 @media (max-width: 834px) {
   .lawyer-card {
-   /*  max-width: 300px;
-    min-width: 250px;
-    flex-basis: 250px; */
-    width: max(250px, min(300px, 64vw));
-    height: 348px;
-
     &__img {
-      height: 235px;
+      height: clamp(235px, calc(235px + 85 * ((100vw - 320px) / (834 - 320))), 320px);
     }
   }
-  
+}
+
+@media (max-width: 560px) {
+  .lawyer-card {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 390px) {
+  .lawyer-card {
+    &__subtitle {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+@media (max-width: 565px) {
+  .lawyer-card {
+    &__subtitle {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
 }
