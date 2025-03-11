@@ -1,8 +1,11 @@
 .reviews-card {
-  width: 648px;
+  flex: 1 0 576px;
+  max-width: 648px;
+  min-width: 576px;
   padding: 32px;
   background: #fff;
   box-shadow: 2px 2px 10px 0px rgba(33, 33, 33, 0.15);
+  flex-shrink: 0;
 
   &__info {
     display: flex;
@@ -42,5 +45,52 @@
     -webkit-line-clamp: 4;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 834px) {
+  .reviews-card {
+    &__desc {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews-card {
+    flex-shrink: 1;
+    max-width: 576px;
+    min-width: 340px;
+    width: 576px;
+  }
+}
+
+@media (max-width: 420px) {
+  .reviews-card {
+    padding: 24px;
+    &__icon {
+      display: none;
+    }
+
+    &__desc {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 9;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__img {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
   }
 }

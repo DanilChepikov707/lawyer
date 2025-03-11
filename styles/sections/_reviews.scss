@@ -10,5 +10,42 @@
     margin-top: 48px;
     display: flex;
     justify-content: space-between;
+    gap: 24px;
+
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 834px) {
+  .reviews {
+    &__buttons {
+      margin-top: 36px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .reviews {
+    padding-top: 31px;
+    padding-bottom: 40px;
+    &__buttons {
+      margin-top: 24px;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+
+    &__cards {
+      gap: 30px;
+      margin-top: 24px;
+    }
   }
 }
